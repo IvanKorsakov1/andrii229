@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px;
+    }
+    .container{
+        max-width: 400px;
+        margin: 0 auto;
+
+    }
+    .form-group{
+        margin-bottom: 10px;
+    }
+    .form-group label{
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input{
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    #output{
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>Formularz </br>Imię i Nazwisko</h1>
+    <div class="form-group">
+        <label for="firstName">Nazwisko:</label>
+        <input type="text" name="lastName" id="lastName">
+    </div>
+    <button onclick="displayNames()">Show</button>
+    <div id="output"></div>
+   </div> 
+
+   <script>
+    function displayNames(){
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+
+        document.getElementById('output').innerText = 'Imię: ' + firstName + ', Nazwisko: '+ lastName
+    }
+   </script>
+</body>
+</html>
